@@ -297,8 +297,8 @@
   };
 
   // event handlers for win condition check
-  $box.hover(checkWin1);
-  $box.hover(checkWin2);
+  $box.click(checkWin1);
+  $box.click(checkWin2);
 
 
   //**************** PLAYER WIN SCREEN ****************//
@@ -316,7 +316,7 @@
   //**************** GAME DRAW & DRAW SCREEN ****************//
 
   //event handler and function when there is a tie; when all squares are full
-  $box.mouseleave(()=>{
+  $box.click(()=>{
       if(genPlayer1.squares + genPlayer2.squares == 9){
         if(!checkWin1() && !checkWin2()){
           $("#finish").addClass("screen-win-tie");
